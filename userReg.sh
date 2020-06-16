@@ -1,10 +1,8 @@
 #! /bin/bash
-echo "Enter first name"
-read firstName
-echo "Enter last name"
-read lastName
-pattern="^[[:upper:]]+([a-z]{3,})"
-if [[ $firstName =~ $pattern && $lastName =~ $pattern ]]
+echo "Enter email"
+read email
+pattern="^[a-zA-Z0-9._%+-]+\@[a-zA-Z0-9]+\.[A-Za-z]{2,6}"
+if [[ $email =~ $pattern  ]]
 then
 	echo "Valid"
 else
