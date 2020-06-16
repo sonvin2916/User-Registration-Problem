@@ -1,11 +1,11 @@
 #! /bin/bash
-echo "Enter phone number"
-read no
-pattern="^[0-9]{2}[[:space:]][0-9]{10}"
-if [[ $no =~ $pattern  ]]
+echo "Enter password"
+read pwd
+pattern="^([A-Za-z0-9@!#$]){8,}$"
+if [[ $pwd =~ $pattern  ]]
 then
-	echo "Valid Phone number"
+	echo "Valid"
 else
-	echo "Invalid Phone number"
+	echo "Password should cointain minimum 8 characters"
 fi
 
