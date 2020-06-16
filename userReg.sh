@@ -1,11 +1,11 @@
 #! /bin/bash
-echo "Enter email"
-read email
-pattern="^[a-zA-Z0-9._%+-]+\@[a-zA-Z0-9]+\.[A-Za-z]{2,6}"
-if [[ $email =~ $pattern  ]]
+echo "Enter phone number"
+read no
+pattern="^[0-9]{2}[[:space:]][0-9]{10}"
+if [[ $no =~ $pattern  ]]
 then
-	echo "Valid"
+	echo "Valid Phone number"
 else
-	echo "Invalid"
+	echo "Invalid Phone number"
 fi
 
