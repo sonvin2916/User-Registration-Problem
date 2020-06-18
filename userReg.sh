@@ -1,12 +1,12 @@
 #! /bin/bash
 echo "Enter password"
 read pwd
-pattern="^([A-Za-z0-9@!#]*)[[:upper:]][[:lower:]]+([A-Za-z0-9@!#]*)$"
+pattern="^[a-zA-Z@#!]*[0-9]+[a-zA-Z@#!]*$"
 
 if [[ $pwd =~ $pattern  ]]
 then
 	echo "Valid"
 else
-	echo "Invalid"
+	 echo "Error : At least one digit mandatory"
 fi
 
