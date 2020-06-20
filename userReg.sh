@@ -1,11 +1,16 @@
 #! /bin/bash
-echo "Enter first name"
-read firstName
-pattern="^[[:upper:]]+([a-z]{3,})"
-if [[ $firstName =~ $pattern ]]
-then
-	echo "Valid"
-else
-	echo "Invalid"
-fi
+shopt -s extglob
+function name()
+{
+
+	pattern="^[[:upper:]]+([a-z]{3,})"
+	if [[ $fname =~ $pattern ]]
+	then
+		echo "Valid"
+	else
+		echo "Invalid"
+	fi
+}
+read -p " Enter first name : " fname
+name $fname
 
