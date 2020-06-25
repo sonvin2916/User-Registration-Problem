@@ -1,13 +1,30 @@
 #! /bin/bash
-echo "Enter first name"
-read firstName
-echo "Enter last name"
-read lastName
-pattern="^[[:upper:]]+([a-z]{3,})"
-if [[ $firstName =~ $pattern && $lastName =~ $pattern ]]
-then
-	echo "Valid"
-else
-	echo "Invalid"
-fi
+
+function name()
+{
+
+	pattern="^[[:upper:]]+([a-z]{3,})"
+	if [[ $fname =~ $pattern ]]
+	then
+		echo "Valid"
+	else
+		echo "Invalid"
+	fi
+}
+read -p " Enter first name : " fname
+name $fname
+
+function lastName()
+{
+
+        pattern="^[[:upper:]]+([a-z]{3,})"
+        if [[ $lname =~ $pattern ]]
+        then
+                echo "Valid"
+        else
+                echo "Invalid"
+        fi
+}
+read -p "Enter last name : " lname
+lastName $lname
 
